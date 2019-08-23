@@ -6,9 +6,9 @@ class Toolbar extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div></div>
-                <i></i>
+            <div className={'row toolbar pl-2 pr-2 pt-1 pb-1'} style={{'align-items': 'center', 'justify-content': 'space-between', 'margin': 0}}>
+                <div>{this.props.name}</div>
+                <i className={this.props.icon} onClick={this.props.onClick} />
             </div>
         );
     }

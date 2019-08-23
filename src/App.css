@@ -1,3 +1,52 @@
 .App {
-  text-align: center;
+  --shadow: 2px 2px 4px 5px #7C5329;
+  --tool-bar-height: 35px;
+
+  padding: 20px;
+  background: #E2C2A0;
+  color: #59340F;
+  height: 100%;
+}
+
+.toolbar {
+  background: #E2C2A0;
+  border-bottom: 1px solid #59340F;
+  height: var(--tool-bar-height);
+
+  font-size: large;
+  font-weight: bold;
+}
+
+.editorWrap>div, #editor {
+  width: 100%;
+  height: 100%;
+}
+
+#editor {
+  height: calc(100% - var(--tool-bar-height));
+  resize: none;
+}
+
+#preview {
+  overflow: auto;
+  height: calc(100% - var(--tool-bar-height));
+}
+
+.editorWrap>div, .previewWrap>div {
+  -webkit-box-shadow: var(--shadow);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    var(--shadow);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         var(--shadow);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  background: white;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.maximized {
+  height: calc(99vh - var(--tool-bar-height));
+}
+
+@media screen and (max-width: 768px) {
+  .editorWrap:not(.maximized), .previewWrap:not(.maximized) {
+    height: 46vh;
+  }
 }
