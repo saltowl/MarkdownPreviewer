@@ -6,6 +6,7 @@
   background: #E2C2A0;
   color: #59340F;
   height: 100%;
+  min-height: 100vh;
 }
 
 .toolbar {
@@ -43,6 +44,19 @@
 
 .maximized {
   height: calc(99vh - var(--tool-bar-height));
+}
+
+pre, code, thead, blockquote {
+    background: #fafafa;
+}
+
+th, td {
+    border: 1px solid #59340F;
+}
+
+blockquote {
+    border-left: 3px solid #59340F;
+    padding-left: 4px;
 }
 
 @media screen and (max-width: 768px) {
