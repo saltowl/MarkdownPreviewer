@@ -22,6 +22,18 @@ const handleInputChange = (input) => {
     };
 };
 
+const handleMaximizedEditor = () => {
+    return {
+        type: constants.MAXIMIZE_EDITOR
+    };
+};
+
+const handleMaximizedPreview = () => {
+    return {
+        type: constants.MAXIMIZE_PREVIEW
+    };
+};
+
 const mapStateToProps = (state) => {
     return {
         input: state.rootReducer.input,
@@ -34,6 +46,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleInputChange: (input) => {
             dispatch(handleInputChange(input));
+        },
+        handleMaximizedEditor: () => {
+            dispatch(handleMaximizedEditor());
+        },
+        handleMaximizedPreview: () => {
+            dispatch(handleMaximizedPreview());
         }
     };
 };

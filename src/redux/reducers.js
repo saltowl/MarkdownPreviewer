@@ -8,10 +8,10 @@ function rootReducer(state = constants.INITIAL_STATE, action = {'type': 'default
             newState.input = action.input;
             return newState;
         case constants.MAXIMIZE_EDITOR:
-            newState.editorMaximized = true;
+            newState.editorMaximized = !state.editorMaximized;
             return newState;
         case constants.MAXIMIZE_PREVIEW:
-            newState.previewMaximized = true;
+            newState.previewMaximized = !state.previewMaximized;
             return newState;
         default:
             return state;
